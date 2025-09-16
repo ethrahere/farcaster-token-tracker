@@ -225,10 +225,17 @@ function snapshotFromMarket(
   if (market?.ath_change_percentage !== undefined && market.ath_change_percentage !== null) {
     // CoinGecko provides negative percentages (e.g., -73.67 means 73.67% below ATH)
     // Convert to positive percentage below ATH
+    // Note: If percentage is positive, it means token is above previous ATH (new ATH reached)
     percentBelowAth = Math.abs(market.ath_change_percentage);
-  } else if (athMarketCap) {
+  } else if (athMarketCap && athMarketCap > 0) {
     // Fallback to our calculation if API doesn't have ATH data
     percentBelowAth = computePercentBelowAth(marketCap, athMarketCap);
+
+    // Validation: If current market cap > ATH market cap, it indicates a new ATH
+    if (marketCap && marketCap > athMarketCap) {
+      console.warn(`Token ${market?.name || 'unknown'} appears to have reached a new ATH. Current: ${marketCap}, ATH: ${athMarketCap}`);
+      percentBelowAth = 0; // At new ATH
+    }
   }
 
   return {
@@ -253,12 +260,15 @@ export async function fetchTokensSnapshot(): Promise<TokensResponse> {
   if (farcasterTokens.length > 0) {
     // Use Farcaster ecosystem tokens
     tokens = farcasterTokens.map<TokenMarketSnapshot>((market) => {
-      // Try to get ATH market cap from static data first, otherwise calculate from API
-      let athMarketCap = getAthMarketCapFromStaticData(market.id);
+      // Calculate ATH market cap from API's ATH price and circulating supply
+      // This is more accurate than static data since it reflects actual ATH price
+      let athMarketCap = 0;
 
-      // If no static ATH data, calculate from API's ATH price and circulating supply
-      if (athMarketCap === 0 && market.ath && market.circulating_supply) {
+      if (market.ath && market.circulating_supply && market.circulating_supply > 0) {
         athMarketCap = market.ath * market.circulating_supply;
+      } else {
+        // Fallback to static data only if API data is missing
+        athMarketCap = getAthMarketCapFromStaticData(market.id);
       }
 
       const snapshot = snapshotFromMarket(market, athMarketCap);
@@ -355,12 +365,15 @@ export async function fetchTokenSnapshot(symbol: string): Promise<TokenResponse>
   );
 
   if (farcasterToken) {
-    // Try to get ATH market cap from static data first, otherwise calculate from API
-    let athMarketCap = getAthMarketCapFromStaticData(farcasterToken.id);
+    // Calculate ATH market cap from API's ATH price and circulating supply
+    // This is more accurate than static data since it reflects actual ATH price
+    let athMarketCap = 0;
 
-    // If no static ATH data, calculate from API's ATH price and circulating supply
-    if (athMarketCap === 0 && farcasterToken.ath && farcasterToken.circulating_supply) {
+    if (farcasterToken.ath && farcasterToken.circulating_supply && farcasterToken.circulating_supply > 0) {
       athMarketCap = farcasterToken.ath * farcasterToken.circulating_supply;
+    } else {
+      // Fallback to static data only if API data is missing
+      athMarketCap = getAthMarketCapFromStaticData(farcasterToken.id);
     }
 
     const snapshot = snapshotFromMarket(farcasterToken, athMarketCap);
