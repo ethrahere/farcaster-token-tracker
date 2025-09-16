@@ -222,20 +222,8 @@ function snapshotFromMarket(
   // Use ATH change percentage directly from API if available, otherwise calculate from athMarketCap
   let percentBelowAth: number | null = null;
 
-  if (market?.ath_change_percentage !== undefined && market.ath_change_percentage !== null) {
-    // CoinGecko provides negative percentages (e.g., -73.67 means 73.67% below ATH)
-    // Convert to positive percentage below ATH
-    // Note: If percentage is positive, it means token is above previous ATH (new ATH reached)
-    percentBelowAth = Math.abs(market.ath_change_percentage);
-  } else if (athMarketCap && athMarketCap > 0) {
-    // Fallback to our calculation if API doesn't have ATH data
+  if (athMarketCap && athMarketCap > 0) {
     percentBelowAth = computePercentBelowAth(marketCap, athMarketCap);
-
-    // Validation: If current market cap > ATH market cap, it indicates a new ATH
-    if (marketCap && marketCap > athMarketCap) {
-      console.warn(`Token ${market?.name || 'unknown'} appears to have reached a new ATH. Current: ${marketCap}, ATH: ${athMarketCap}`);
-      percentBelowAth = 0; // At new ATH
-    }
   }
 
   return {
