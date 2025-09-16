@@ -3,15 +3,13 @@ import { fetchTokenSnapshot } from "@/lib/tokenService";
 
 export const dynamic = "force-dynamic";
 
-type Params = {
-  params: {
-    symbol: string;
-  };
-};
-
-export async function GET(request: Request, { params }: Params) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ symbol: string }> }
+) {
+  let symbol = 'unknown';
   try {
-    const { symbol } = await params;
+    ({ symbol } = await params);
     const payload = await fetchTokenSnapshot(symbol);
     if (!payload.token) {
       return NextResponse.json({ message: "Token not found" }, { status: 404 });

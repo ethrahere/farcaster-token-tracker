@@ -6,14 +6,14 @@ import type {
   TokensResponse,
 } from "@/types/token";
 
-const COINGECKO_API_KEY = process.env.COINGECKO_API_KEY;
+const _COINGECKO_API_KEY = process.env.COINGECKO_API_KEY;
 
 const defaultBase = "https://api.coingecko.com/api/v3";
 
 const COINGECKO_API_BASE = process.env.COINGECKO_API_BASE ?? defaultBase;
 
 // Free API doesn't need authentication headers
-const COINGECKO_API_KEY_HEADER = "x-cg-demo-api-key";
+const _COINGECKO_API_KEY_HEADER = "x-cg-demo-api-key";
 
 type CoinMarketResponse = {
   id: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, use } from "react";
 import { useRouter } from "next/navigation";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Bar, Cell } from "recharts";
 import { useTokenDetail } from "@/hooks/useTokenData";
@@ -9,8 +9,9 @@ import { formatCurrency, formatDateTime, formatPercent } from "@/lib/format";
 
 const COLORS = ["#6366F1", "#EC4899"];
 
-export default function TokenDetailPage({ params }: { params: { symbol: string } }) {
-  const symbol = params.symbol.toUpperCase();
+export default function TokenDetailPage({ params }: { params: Promise<{ symbol: string }> }) {
+  const { symbol: symbolParam } = use(params);
+  const symbol = symbolParam.toUpperCase();
   const router = useRouter();
   const { data, isLoading, isError, error, refetch, isFetching } = useTokenDetail(symbol);
 
