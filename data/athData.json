@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Degen",
+    "symbol": "DEGEN",
+    "coingeckoId": "degen-base",
+    "athMarketCap": 325000000
+  },
+  {
+    "name": "Higher",
+    "symbol": "HIGHER",
+    "coingeckoId": "higher",
+    "athMarketCap": 78000000
+  },
+  {
+    "name": "Moxie",
+    "symbol": "MOXIE",
+    "coingeckoId": "moxie",
+    "athMarketCap": 61000000
+  },
+  {
+    "name": "TN100X",
+    "symbol": "TN100X",
+    "coingeckoId": "tn100x",
+    "athMarketCap": 125000000
+  },
+  {
+    "name": "Build",
+    "symbol": "BUILD",
+    "coingeckoId": "build",
+    "athMarketCap": 51000000
+  },
+  {
+    "name": "BankrCoin",
+    "symbol": "BNKR",
+    "coingeckoId": "bankercoin-2",
+    "athMarketCap": 25000000
+  },
+  {
+    "name": "Clanker",
+    "symbol": "CLANKER",
+    "coingeckoId": "clanker",
+    "athMarketCap": 45000000
+  },
+  {
+    "name": "noice",
+    "symbol": "NOICE",
+    "coingeckoId": "noice",
+    "athMarketCap": 15000000
+  },
+  {
+    "name": "BRACKY",
+    "symbol": "BRACKY",
+    "coingeckoId": "bracky",
+    "athMarketCap": 8000000
+  },
+  {
+    "name": "Toshi",
+    "symbol": "TOSHI",
+    "coingeckoId": "toshi",
+    "athMarketCap": 95000000
+  },
+  {
+    "name": "Brett",
+    "symbol": "BRETT",
+    "coingeckoId": "brett",
+    "athMarketCap": 1800000000
+  },
+  {
+    "name": "Fwog",
+    "symbol": "FWOG",
+    "coingeckoId": "fwog",
+    "athMarketCap": 750000000
+  },
+  {
+    "name": "Normie",
+    "symbol": "NORMIE",
+    "coingeckoId": "normie",
+    "athMarketCap": 200000000
+  },
+  {
+    "name": "Based",
+    "symbol": "BASED",
+    "coingeckoId": "based",
+    "athMarketCap": 180000000
+  },
+  {
+    "name": "Keyboard Cat",
+    "symbol": "KEYCAT",
+    "coingeckoId": "keyboard-cat",
+    "athMarketCap": 150000000
+  },
+  {
+    "name": "Basenji",
+    "symbol": "BENJI",
+    "coingeckoId": "basenji",
+    "athMarketCap": 120000000
+  },
+  {
+    "name": "Donut",
+    "symbol": "DONUT",
+    "coingeckoId": "donut",
+    "athMarketCap": 85000000
+  },
+  {
+    "name": "Regen",
+    "symbol": "REGEN",
+    "coingeckoId": "regen",
+    "athMarketCap": 75000000
+  },
+  {
+    "name": "Aero",
+    "symbol": "AERO",
+    "coingeckoId": "aerodrome-finance",
+    "athMarketCap": 800000000
+  },
+  {
+    "name": "Virtuals Protocol",
+    "symbol": "VIRTUAL",
+    "coingeckoId": "virtuals-protocol",
+    "athMarketCap": 2500000000
+  },
+  {
+    "name": "ai16z",
+    "symbol": "AI16Z",
+    "coingeckoId": "ai16z",
+    "athMarketCap": 1200000000
+  },
+  {
+    "name": "AIXBT",
+    "symbol": "AIXBT",
+    "coingeckoId": "aixbt-by-virtuals",
+    "athMarketCap": 900000000
+  },
+  {
+    "name": "LUNA",
+    "symbol": "LUNA",
+    "coingeckoId": "luna-by-virtuals",
+    "athMarketCap": 400000000
+  },
+  {
+    "name": "GAME",
+    "symbol": "GAME",
+    "coingeckoId": "game-by-virtuals",
+    "athMarketCap": 300000000
+  },
+  {
+    "name": "Sekoia",
+    "symbol": "SEKOIA",
+    "coingeckoId": "sekoia",
+    "athMarketCap": 250000000
+  },
+  {
+    "name": "OSKI",
+    "symbol": "OSKI",
+    "coingeckoId": "oski",
+    "athMarketCap": 200000000
+  },
+  {
+    "name": "Zerebro",
+    "symbol": "ZEREBRO",
+    "coingeckoId": "zerebro",
+    "athMarketCap": 800000000
+  },
+  {
+    "name": "Based God",
+    "symbol": "TYBG",
+    "coingeckoId": "based-god",
+    "athMarketCap": 150000000
+  },
+  {
+    "name": "Tribal",
+    "symbol": "TRIBAL",
+    "coingeckoId": "tribal",
+    "athMarketCap": 120000000
+  },
+  {
+    "name": "MYRO",
+    "symbol": "MYRO",
+    "coingeckoId": "myro-2",
+    "athMarketCap": 300000000
+  },
+  {
+    "name": "MIGGLES",
+    "symbol": "MIGGLES",
+    "coingeckoId": "miggles",
+    "athMarketCap": 180000000
+  },
+  {
+    "name": "GNON",
+    "symbol": "GNON",
+    "coingeckoId": "gnon",
+    "athMarketCap": 160000000
+  },
+  {
+    "name": "OGGY",
+    "symbol": "OGGY",
+    "coingeckoId": "oggy-inu-base",
+    "athMarketCap": 140000000
+  },
+  {
+    "name": "BOME",
+    "symbol": "BOME",
+    "coingeckoId": "book-of-meme",
+    "athMarketCap": 1500000000
+  },
+  {
+    "name": "PEPE",
+    "symbol": "PEPE",
+    "coingeckoId": "pepe",
+    "athMarketCap": 15000000000
+  },
+  {
+    "name": "WIF",
+    "symbol": "WIF",
+    "coingeckoId": "dogwifcoin",
+    "athMarketCap": 5000000000
+  },
+  {
+    "name": "BONK",
+    "symbol": "BONK",
+    "coingeckoId": "bonk",
+    "athMarketCap": 8000000000
+  },
+  {
+    "name": "FLOKI",
+    "symbol": "FLOKI",
+    "coingeckoId": "floki",
+    "athMarketCap": 3000000000
+  },
+  {
+    "name": "SHIB",
+    "symbol": "SHIB",
+    "coingeckoId": "shiba-inu",
+    "athMarketCap": 50000000000
+  },
+  {
+    "name": "DOGE",
+    "symbol": "DOGE",
+    "coingeckoId": "dogecoin",
+    "athMarketCap": 100000000000
+  },
+  {
+    "name": "Moonwell",
+    "symbol": "WELL",
+    "coingeckoId": "moonwell",
+    "athMarketCap": 500000000
+  },
+  {
+    "name": "Prime",
+    "symbol": "PRIME",
+    "coingeckoId": "echelon-prime",
+    "athMarketCap": 800000000
+  },
+  {
+    "name": "Seamless",
+    "symbol": "SEAM",
+    "coingeckoId": "seamless-protocol",
+    "athMarketCap": 200000000
+  },
+  {
+    "name": "Extra Finance",
+    "symbol": "EXTRA",
+    "coingeckoId": "extra-finance",
+    "athMarketCap": 150000000
+  },
+  {
+    "name": "RocketPool ETH",
+    "symbol": "RETH",
+    "coingeckoId": "rocket-pool-eth",
+    "athMarketCap": 8000000000
+  },
+  {
+    "name": "Coinbase Wrapped BTC",
+    "symbol": "CBBTC",
+    "coingeckoId": "coinbase-wrapped-btc",
+    "athMarketCap": 15000000000
+  },
+  {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "coingeckoId": "usd-coin",
+    "athMarketCap": 45000000000
+  },
+  {
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "coingeckoId": "ethereum",
+    "athMarketCap": 600000000000
+  },
+  {
+    "name": "Wrapped Bitcoin",
+    "symbol": "WBTC",
+    "coingeckoId": "wrapped-bitcoin",
+    "athMarketCap": 18000000000
+  },
+  {
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "coingeckoId": "chainlink",
+    "athMarketCap": 35000000000
+  },
+  {
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "coingeckoId": "uniswap",
+    "athMarketCap": 25000000000
+  }
+]
